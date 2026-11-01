@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/SrGaabriel/stellation/cfg"
+	"github.com/SrGaabriel/stellation/cli"
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +13,8 @@ var initCmd = &cobra.Command{
 
 	This command should be run in the root directory of your modpack.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("init called")
+		cfg.SaveConfig(cfg.DefaultConfig())
+		cli.Success("stellation initialized successfully")
 	},
 }
 
