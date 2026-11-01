@@ -4,7 +4,7 @@ default:
     @just --list
 
 build:
-    go build -o build/stellation ./cmd/stellation
+    go build -o build/stellation .
 
 test:
     go test ./...

@@ -19,8 +19,8 @@
           pname = "stellation";
           version = self.shortRev or self.dirtyShortRev or "dev";
           src = ./.;
-          vendorHash = null;
-          subPackages = [ "cmd/stellation" ];
+          vendorHash = "sha256-spo+YjBeDZJiQF6guHh/I643kEWFOTrc3TIO6ZRKdU0=";
+          subPackages = [ "." ];
           ldflags = [
             "-s"
             "-w"
