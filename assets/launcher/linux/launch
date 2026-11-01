@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+here="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+export STELLATION_LAUNCHER="$here/freesm/FreesmLauncher"
+export STELLATION_TEMPLATE="$here/template"
+export STELLATION_INSTANCE={{.Name | sh}}
+export STELLATION_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/"{{.Slug | sh}}
+exec bash "$here/run.sh" "$@"
