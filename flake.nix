@@ -1,6 +1,5 @@
 {
   description = "stellation: branded, self-updating Minecraft modpack distributions";
-
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs =
@@ -37,6 +36,7 @@
             gopls
             gotools
             goreleaser
+            cobra-cli
             just
             packwiz
           ];
